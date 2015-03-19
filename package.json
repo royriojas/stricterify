@@ -1,7 +1,7 @@
 {
   "name": "stricterify",
   "version": "1.0.1",
-  "description": "Simple wrapper around esformatter to beautify javascript files overriding the content of the files",
+  "description": "Browserify transform to add 'use strict' on the modules that don't have it at the first place. Use with care. Better if not global",
   "main": "index.js",
   "scripts": {
     "beautify": "esbeautifier index.js 'src/**/*.js' 'specs/**/*.js'",
@@ -10,9 +10,12 @@
     "test": "mocha-runner 'specs/**/*.js'",
     "cover": "istanbul cover -x 'specs/**/*.js' mocha-runner 'specs/**/*.js' html text-summary",
     "watch": "npm run cover && watch-spawn -p 'specs/**/*.js' -p 'index.js' npm run cover",
-    "check": "npm run beautify && npm run eslint",
-    "prepush": "npm run beautify-check && npm run eslint && npm test",
-    "bump" : "bumpery --verify='npm run prepush'"
+    "check": "npm run beautify-check && npm run eslint",
+    "lint": "npm run beautify && npm run eslint",
+    "prepush": "npm run check && npm test",
+    "bump": "bumpery --verify='npm run prepush'",
+    "changelog": "changelogx -f markdown -o ./changelog.md",
+    "install-hook": "prepush install && changelogx install-hook"
   },
   "repository": {
     "type": "git",
@@ -24,11 +27,14 @@
     "npm run prepush"
   ],
   "devDependencies": {
+    "bumpery": "^1.0.2",
+    "changelogx": "^1.0.5",
+    "esbeautifier": "^2.0.3",
     "eslint": "^0.16.1",
     "eslint-friendly-formatter": "^1.0.3",
     "istanbul": "^0.3.7",
     "mocha-runner": "^1.0.4",
-    "prepush": "^1.0.2",
+    "prepush": "^1.0.6",
     "proxyquire": "^1.4.0",
     "watch-spawn": "^1.0.3"
   },
@@ -46,5 +52,12 @@
     "browserify",
     "add strict to modules",
     "replace calls to require"
-  ]
+  ],
+  "changelogx": {
+    "issueIDRegExp": "#(\\d+)",
+    "commitURL": "https://github.com/royriojas/stricterify/commit/{0}",
+    "authorURL": "https://github.com/{0}",
+    "issueIDURL": "https://github.com/royriojas/stricterify/issues/{0}",
+    "projectName": "stricterify"
+  }
 }

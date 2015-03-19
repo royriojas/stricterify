@@ -42,3 +42,5 @@ b.transform( stricterify );
 
 b.bundle().pipe(process.stdout);
 ```
+
+## [Changelog](./changelog.md)
