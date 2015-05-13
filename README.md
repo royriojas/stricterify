@@ -34,7 +34,15 @@ npm i --save-dev stricterify
 ## Usage
 
 ```
-var stricterify = require( 'stricterify' ).configure( deps );
+var stricterify = require( 'stricterify' ).configure( {
+  checkIfSkip: function (file) {
+    // use this callback to decide if you want to skip the
+    // file from the transform. This is useful if you're
+    // requiring legacy modules that are not prepared to be
+    // work in strict mode.
+    return !!file.match(/skip\.js/);
+  }
+} );
 
 var b = browserify();
 b.add('./my-module');
