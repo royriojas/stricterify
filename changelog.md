@@ -1,5 +1,27 @@
 
 # stricterify - Changelog
+## v1.0.3
+- **Build Scripts Changes**
+  - Release v1.0.3 - [154ecd6]( https://github.com/royriojas/stricterify/commit/154ecd6 ), [royriojas](https://github.com/royriojas), 13/05/2015 02:37:08
+    
+- **Features**
+  - Add an option to skip adding the `use strict` directive to certain files - [f2d153a]( https://github.com/royriojas/stricterify/commit/f2d153a ), [royriojas](https://github.com/royriojas), 13/05/2015 02:36:50
+    if you want to prevent certain files from being affected by the transform, you can configure the transform passing a `checkIfSkip` callback.
+   
+   ```javascript
+   var stricterify = require('stricterify').configure({
+      checkIfSkip: function (file) {
+        return true; // true if you want to skip the transform on the given file or false if you don't.
+      }
+   });
+   
+   b.transform(stricterify);
+   ```
+   
+#### changelog
+- **Build Scripts Changes**
+  - generated changelog - [4cfa69b]( https://github.com/royriojas/stricterify/commit/4cfa69b ), [Roy Riojas](https://github.com/Roy Riojas), 19/03/2015 00:17:59
+    
 ## v1.0.2
 - **Build Scripts Changes**
   - Release v1.0.2 - [4d70a20]( https://github.com/royriojas/stricterify/commit/4d70a20 ), [Roy Riojas](https://github.com/Roy Riojas), 19/03/2015 00:17:17
