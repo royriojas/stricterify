@@ -1,6 +1,6 @@
 {
   "name": "stricterify",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Browserify transform to add 'use strict' on the modules that don't have it at the first place. Use with care. Better if not global",
   "main": "index.js",
   "scripts": {
