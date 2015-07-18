@@ -1,5 +1,10 @@
 
 # stricterify - Changelog
+## HEAD
+- **Documentation**
+  - Generate changelog - [9e7e199]( https://github.com/royriojas/stricterify/commit/9e7e199 ), [royriojas](https://github.com/royriojas), 17/07/2015 18:00:11
+
+    
 ## v1.1.0
 - **Build Scripts Changes**
   - Release v1.1.0 - [5c0453a]( https://github.com/royriojas/stricterify/commit/5c0453a ), [royriojas](https://github.com/royriojas), 17/07/2015 17:59:55
