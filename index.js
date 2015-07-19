@@ -1,9 +1,6 @@
 var transformTools = require( 'browserify-transform-tools' );
 
 var options = {
-  excludeExtensions: [
-    '.json'
-  ],
   includeExtensions: [
     '.jsx',
     '.js',
