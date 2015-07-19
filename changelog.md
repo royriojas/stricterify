@@ -1,7 +1,18 @@
 
 # stricterify - Changelog
-## HEAD
+## v1.1.1
+- **Build Scripts Changes**
+  - Release v1.1.1 - [3b0835c]( https://github.com/royriojas/stricterify/commit/3b0835c ), [royriojas](https://github.com/royriojas), 19/07/2015 06:26:19
+
+    
+- **Bug Fixes**
+  - remove exclude extensions in favor of include extensions - [a23a7e4]( https://github.com/royriojas/stricterify/commit/a23a7e4 ), [royriojas](https://github.com/royriojas), 19/07/2015 06:26:16
+
+    
 - **Documentation**
+  - Generate changelog - [be1a010]( https://github.com/royriojas/stricterify/commit/be1a010 ), [royriojas](https://github.com/royriojas), 17/07/2015 18:03:28
+
+    
   - Generate changelog - [9e7e199]( https://github.com/royriojas/stricterify/commit/9e7e199 ), [royriojas](https://github.com/royriojas), 17/07/2015 18:00:11
 
     
